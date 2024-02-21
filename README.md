@@ -1,38 +1,20 @@
-# create-svelte
+# Hey 👋🏻
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Welcome to the assessment test for the Full-Stack Developer position at Giftery!
 
-## Creating a project
+This test is designed to evaluate your skills and creativity in full-stack development, specifically focusing on SvelteKit.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Your task is to build a web application that allows users to add, manipulate, and download squares on a canvas. The project intentionally uses a library you're probably not familiar with (fabric.js) – you can find a link to the documentation in the comments.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Features to Implement
+You'll find everything written in comments in the files.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Technical Requirements
+- Frontend: Svelte, Fabric.js for canvas manipulation
+- Backend: SvelteKit
+- Styling: the repo is set up with Tailwind, but you can write vanilla CSS if you'd like
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## How to set up and submit
+1. Clone this repo
+2. Build the app according to the description – please also log how much time you're spending on this
+3. Once you're done, publish your code to a GitHub repo and send us the link 🥳
