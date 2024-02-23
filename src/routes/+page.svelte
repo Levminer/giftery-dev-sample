@@ -62,7 +62,6 @@
         fabricInstance.moveTo(square, squares.length);
 
         squares = [...squares, square];
-        console.log(squares);
     };
 
     const clearSquares = () => {

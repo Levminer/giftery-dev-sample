@@ -5,7 +5,6 @@
 </script>
 
 <!-- Style button according to reference image /static/button-reference.png -->
-
 <button
   disabled={loading}
   class="bg-white rounded-md text-gray-400 font-bold uppercase px-4 py-2 text-sm shadow-sm shadow-gray-300"
