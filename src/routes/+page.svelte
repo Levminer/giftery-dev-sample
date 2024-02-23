@@ -12,7 +12,21 @@
     $: squares = [] as fabric.Rect[];
 
     onMount(() => {
-        fabricInstance = new fabric.Canvas('canvas');
+        fabricInstance = new fabric.Canvas("canvas");
+        fabricInstance.backgroundColor = "#e2e8f0"; // bg-slate-200
+        fabricInstance.renderAll();
+
+        new Sortable(document.getElementById("square-list")!, {
+            animation: 150,
+            onEnd: function (evt) {
+                // Reorder squares based on the new order of the list
+                const [removed] = squares.splice(evt.oldIndex!, 1);
+                squares.splice(evt.newIndex!, 0, removed!);
+                squares.forEach((square, i) => {
+                    fabricInstance.moveTo(square, i);
+                });
+            },
+        });
     });
 
     onDestroy(() => {
@@ -86,9 +100,12 @@
                 <Button action={downloadImage} label="Download image" />
             </div>
             <h2 class="text-xl">Squares:</h2>
-            <ul>
+            <ul id="square-list">
                 <!-- List of squares in the order of their "z" index -->
                 <!-- Entries of list can be drag&dropped and that action should updateir "z" order on the canvas -->
+                {#each squares as square, i}
+                    <li class="cursor-move">Square #{i} {square.fill}</li>
+                {/each}
             </ul>
         </div>
     </div>
